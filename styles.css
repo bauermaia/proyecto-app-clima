@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    /* colors */
+    --background-color: #222;
+    --background-card: linear-gradient(135deg, #b4d2de, #2a9ba5);
+    --white-color: #d2e5f2;
+    --background-hover: rgba(255, 255, 255, 0.1);
+
+    /* font */
+    --small-font: 18px;
+    --smaller-font:12px;
+    --font-color: #434b4e;
+
+    --shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    --bordeer-bottom:1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Varela Round', serif;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.card{
+    width: 70%;
+    max-width: 600px;
+    background: var(--background-card);
+    color:var(--white-color);
+    margin: 20px auto 10px;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.search input{
+    border:0;
+    outline:0;
+    background-color:var(--white-color);
+    padding: 10px 25px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: var(--small-font);
+    color:var(--font-color);
+    box-shadow: var(--shadow);
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background: var(--white-color);
+    border-radius:50% ;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    margin: 2px;
+}
+
+.search__img{
+    width: 20px;
+    opacity: 0.5;
+}
+
+.opciones{
+    display:none;
+    position: absolute;
+    top: 7.8rem;
+    background: var(--white-color);
+    color: var(--font-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 470px;
+    margin: 10px auto 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.opciones ul{
+   list-style: none;
+   margin: 0;
+   padding: 0; 
+}
+
+.opciones li {
+    padding: 15px;
+    font-size: var(--small-font);
+    border-bottom: var(--bordeer-bottom);
+    cursor:pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.opciones li:hover{
+    background: --background--hover;
+}
+
+.weather__img{
+    padding: 2px;
+    width: 30%;
+}
+
+.weather h1 {
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.detalles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 30px;
+
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.detalles img{
+    width: 40%;
+    margin-right: 10px;
+}
+
+.humedad .wind{
+    font-size: 28;
+    margin-top: -6px;
+}
+
+.swiper-slide {
+   flex: 0 0 calc(35% - 10px);
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    justify-self: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.swiper-slide:hover{
+background: rgba(39, 92, 87, 0.1) ;
+}
+
+.swiper {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    height: 200px;
+}
+
+.swiper-wrapper { 
+     display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.swiper-on{
+    display: flex;
+}
+.forecast-item-date{
+    font-size: var(--smaller-font);
+    color: var(--background-color);
+    padding: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+i{
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: var(--background-color);
+}
+
+.pe{
+    font-size: var(--smaller-font);
+    
+}
+
+.vermas {
+    display: block; /* Asegura que sea un elemento en bloque */
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 50%;
+    background: var(--white-color);
+    color: var(--font-color);
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--smaller-font);
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.vermas:hover, .vermenos:hover{
+    background: var(--background-hover);
+    color: var(--white-color);
+}
+
+.vermenos {
+    display: none; /* Asegura que sea un elemento en bloque */
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 50%;
+    background: var(--white-color);
+    color: var(--font-color);
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--smaller-font);
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+

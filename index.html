@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Aplicación del clima</title>
+        <link rel="stylesheet" href="styles.css">
+
+         <!-- FAVICON -->
+         <link rel="shortcut icon" href="images/logo.png" type="image/png">
+
+          <!-- REMIXICON -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+         <!-- swiper css -->
+         <link rel="stylesheet" href="swiper-bundle.min.css">
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Introduce la ciudad" spellcheck="false" id="ciudad">
+                <button class="search__button"><img class="search__img" src="images/search.png"></button>
+                <div class="opciones"></div>
+            </div>
+
+            <div class="weather">
+                <img src="images/clear.png" class="weather__img">
+                <h1 class="temp"></h1>
+                <h2 class="city"></h2>
+                <h3 class="pais"></h3>
+            </div>
+
+            <div class="detalles">
+                <div class="col">
+                    <img src="images/humidity.png" >
+                    <div>
+                        <p class="humedad"></p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Velocidad del viento</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="vermas">Ver más información...</h2>
+            <h2 class="vermenos">Ver menos...</h2>
+            
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide sensasion">
+                    <h5 class="forecast-item-date ">Sensación térmica</h5>
+                    <i class="ri-temp-cold-line"></i>
+                    <p class="forecast-item-sensasion"></p>
+                </div>
+            
+
+          
+                <div class="swiper-slide presion">
+                    <h5 class="forecast-item-date ">Presión</h5>
+                    <i class="ri-arrow-down-fill"></i>
+                    <p class="forecast-item-presion"></p>
+                </div>
+            
+
+           
+                <div class="swiper-slide max">
+                    <h5 class="forecast-item-date ">Temperatura máxima</h5>
+                    <i class="ri-temp-hot-fill"></i>
+                    <p class="forecast-item-max"></p>
+                </div>
+            
+
+          
+                <div class="swiper-slide min">
+                    <h5 class="forecast-item-date ">Temperatura mínima</h5>
+                    <i class="ri-temp-cold-fill"></i>
+                    <p class="forecast-item-min"></p>
+                </div>
+            
+
+           
+                <div class="swiper-slide amanecer">
+                    <h5 class="forecast-item-date ">Amanecer</h5>
+                    <i class="ri-sun-line"></i>
+                    <p class="forecast-item-amanecer"></p>
+                </div>
+            
+
+           
+                <div class="swiper-slide atardecer">
+                    <h5 class="forecast-item-date ">Atardecer</h5>
+                    <i class="ri-contrast-2-fill"></i>
+                    <p class="forecast-item-atardecer"></p>
+                </div>
+            
+
+           
+                <div class= "swiper-slide visibilidad">
+                    <h5 class="forecast-item-date ">Visibilidad</h5>
+                    <i class="ri-eye-line"></i>
+                    <p class="forecast-item-visibilidad"></p>
+                </div>
+
+            
+            
+            </div>
+
+        </div>
+
+        <!-- SWIPER JS -->
+        <script src="swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+         
+    </body>
+</html>
